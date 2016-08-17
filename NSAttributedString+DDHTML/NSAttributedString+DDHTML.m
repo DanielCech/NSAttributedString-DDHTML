@@ -43,6 +43,16 @@
                                italicFont:[UIFont italicSystemFontOfSize:preferredBodyFont.pointSize]];
 }
 
++ (NSAttributedString *)attributedStringFromHTML:(NSString *)htmlString normalFont:(UIFont *)normalFont boldFont:(UIFont *)boldFont
+{
+    UIFont *preferredBodyFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    
+    return [self attributedStringFromHTML:htmlString
+                               normalFont:normalFont
+                                 boldFont:boldFont
+                               italicFont:[UIFont italicSystemFontOfSize:preferredBodyFont.pointSize]];
+}
+
 + (NSAttributedString *)attributedStringFromHTML:(NSString *)htmlString boldFont:(UIFont *)boldFont italicFont:(UIFont *)italicFont
 {
     return [self attributedStringFromHTML:htmlString

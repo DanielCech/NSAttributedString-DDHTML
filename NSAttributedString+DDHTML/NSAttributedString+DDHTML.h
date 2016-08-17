@@ -48,6 +48,18 @@ NS_ASSUME_NONNULL_BEGIN
  *  Generates an attributed string from HTML.
  *
  *  @param htmlString HTML String
+ *  @param normalFont Font to use for general text
+ *  @param boldFont   Font to use for <b> and <strong> tags
+ *
+ *  @return Attributed string
+ */
++ (NSAttributedString *)attributedStringFromHTML:(NSString *)htmlString normalFont:(UIFont *)normalFont boldFont:(UIFont *)boldFont;
+
+
+/**
+ *  Generates an attributed string from HTML.
+ *
+ *  @param htmlString HTML String
  *  @param boldFont   Font to use for <b> and <strong> tags
  *  @param italicFont Font to use for <i> and <em> tags
  *
